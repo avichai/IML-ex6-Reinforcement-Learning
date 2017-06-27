@@ -12,9 +12,11 @@ def getTau():
 
     return tau
 
+
 def getRho():
     rho = np.array([[6, 0], [0, 0], [0, 0], [0, 0], [0, 1]])
     return rho
+
 
 def main():
     sizeS = 5
@@ -27,7 +29,7 @@ def main():
     V2, Q2 = valueIteration(sizeS, sizeA, tau, rho, 0.75)
     V3, Q3 = valueIteration(sizeS, sizeA, tau, rho, 0.85)
 
-    all_gamma = [0.5+(x/100.0) for x in range(49)]
+    all_gamma = [0.5 + (x / 100.0) for x in range(49)]
     v_s0 = []
     v_send = []
     for gamma in all_gamma:
@@ -43,4 +45,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main();
+    main()
